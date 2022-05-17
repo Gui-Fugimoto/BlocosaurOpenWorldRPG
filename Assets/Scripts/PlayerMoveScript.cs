@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMoveScript : MonoBehaviour
 {
+    public FixedJoystick moveJoy;
     public CharacterController controller;
     public Transform cam; 
 
@@ -14,8 +15,12 @@ public class PlayerMoveScript : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        //float horizontal = Input.GetAxisRaw("Horizontal");
+        //float vertical = Input.GetAxisRaw("Vertical");
+
+        float horizontal = moveJoy.Horizontal;
+        float vertical = moveJoy.Vertical;
+
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if(direction.magnitude >= 0.1f)
