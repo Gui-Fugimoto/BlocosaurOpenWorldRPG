@@ -8,7 +8,7 @@ public class IAStarFPS : MonoBehaviour
 {
     public GameObject target;
     public NavMeshAgent agent;
-    public Animator anim;
+   // public Animator anim;
     public SkinnedMeshRenderer render;
     public float DistanceToAttack=3;
     public enum States
@@ -42,7 +42,7 @@ public class IAStarFPS : MonoBehaviour
     void Update()
     {
         
-        anim.SetFloat("Velocidade", agent.velocity.magnitude);
+       // anim.SetFloat("Velocidade", agent.velocity.magnitude);
 
     }
 
@@ -84,8 +84,8 @@ public class IAStarFPS : MonoBehaviour
         agent.isStopped = false;
         agent.destination = RandomPosition(20);
       
-        anim.SetBool("Attack", false);
-        anim.SetBool("Damage", false);
+       // anim.SetBool("Attack", false);
+       // anim.SetBool("Damage", false);
         yield return new WaitForSeconds(1);
         if (Vector3.Distance(transform.position, target.transform.position) < DistanceToAttack * 3)
         {
@@ -107,7 +107,7 @@ public class IAStarFPS : MonoBehaviour
     IEnumerator DamageState()
     {
         agent.isStopped = true;
-        anim.SetBool("Damage", true);
+     //   anim.SetBool("Damage", true);
         for (int i = 0; i < 4; i++)
         {
             render.material.EnableKeyword("_EMISSION");
@@ -130,8 +130,8 @@ public class IAStarFPS : MonoBehaviour
     {
         agent.isStopped = false;
         agent.destination = target.transform.position;
-        anim.SetBool("Attack", false);
-        anim.SetBool("Damage", false);
+       // anim.SetBool("Attack", false);
+      //  anim.SetBool("Damage", false);
         yield return new WaitForSeconds(0.1f);
         if (Vector3.Distance(transform.position, target.transform.position) < DistanceToAttack)
         {
@@ -151,8 +151,8 @@ public class IAStarFPS : MonoBehaviour
     IEnumerator AttackState()
     {
         agent.isStopped = true;
-        anim.SetBool("Attack", true);
-        anim.SetBool("Damage", false);
+      //  anim.SetBool("Attack", true);
+      //  anim.SetBool("Damage", false);
         yield return new WaitForSeconds(0.1f);
         if (Vector3.Distance(transform.position, target.transform.position) > 4)
         {
@@ -168,8 +168,8 @@ public class IAStarFPS : MonoBehaviour
     IEnumerator StoppedState()
     {
         agent.isStopped = true;
-        anim.SetBool("Attack", false);
-        anim.SetBool("Damage", false);
+     //   anim.SetBool("Attack", false);
+    //    anim.SetBool("Damage", false);
         yield return new WaitForSeconds(1f);
         if (Vector3.Distance(transform.position, target.transform.position) < DistanceToAttack * 3)
         {
@@ -189,9 +189,9 @@ public class IAStarFPS : MonoBehaviour
     IEnumerator DeadState()
     {
         agent.isStopped = true;
-        anim.SetBool("Attack", false);
-        anim.SetBool("Dead", true);
-        anim.SetBool("Damage", false);
+    //    anim.SetBool("Attack", false);
+     //   anim.SetBool("Dead", true);
+     //   anim.SetBool("Damage", false);
         yield return new WaitForSeconds(0.05f);
     }
 

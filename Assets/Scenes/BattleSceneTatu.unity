@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 3115734752691976490, guid: e12f678c09d7dcb4eb0908ba5a822af2, type: 3}
-  enemyPrefab: {fileID: 7832679377452356459, guid: f8fa82291c6afea48b0d9248691f55ca, type: 3}
+  enemyPrefab: {fileID: 2924289755879565524, guid: 07c0b440aa95bdf4fba4d15e9e90c72e, type: 3}
   playerBattleStation: {fileID: 1734780226}
   enemyBattleStation: {fileID: 7154203}
   state: 0
@@ -1092,7 +1092,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 815468973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 161169839}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnRunButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &815468973
 MonoBehaviour:
   m_ObjectHideFlags: 0

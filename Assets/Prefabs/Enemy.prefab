@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Mamute
-  unitLevel: 6
-  damage: 14
-  maxHP: 50
-  currentHP: 50
+  unitLevel: 16
+  damage: 20
+  maxHP: 120
+  currentHP: 120
 --- !u!1001 &7832679376206571184
 PrefabInstance:
   m_ObjectHideFlags: 0

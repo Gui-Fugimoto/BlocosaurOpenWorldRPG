@@ -11,6 +11,8 @@ public class StartCombat : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneName);
+
+            Destroy(gameObject, 1f);
         }
     }
 

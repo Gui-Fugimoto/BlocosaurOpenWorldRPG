@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, RUN }
 
@@ -87,6 +87,16 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
+    IEnumerator PlayerRun()
+    {
+
+        dialogText.text = "Blocossauro tentou fugir...";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.RUN;
+        EndBattle();
+    }
 
     IEnumerator EnemyTurn()
     {
@@ -103,7 +113,7 @@ public class BattleSystem : MonoBehaviour
         if (isDead)
         {
             state = BattleState.LOST;
-            StartCoroutine(EndBattle());
+            EndBattle();
         }
         else
         {
@@ -112,25 +122,25 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    IEnumerator EndBattle()
+    void EndBattle()
     {
         if(state == BattleState.WON)
         {
             dialogText.text = "Blocossauro venceu!";
 
-            yield return new WaitForSeconds(2f);
+            
             MudarCenas();
         }
         else if (state == BattleState.LOST)
         {
             dialogText.text = "Blocossauro perdeu...";
-            yield return new WaitForSeconds(2f);
+            
             MudarCenas();
         }
         else if (state == BattleState.RUN)
         {
             dialogText.text = "Blocossauro fugiu!";
-            yield return new WaitForSeconds(2f);
+            
             MudarCenas();
         }
 
@@ -157,8 +167,16 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerHeal());
 
     }
+    public void OnRunButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerRun());
+
+    }
     public void MudarCenas()
     {
-        LoadScreenManager.Instance.LoadScene("World");
+        SceneManager.LoadScene("World");
     }
 }
