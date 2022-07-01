@@ -1144,7 +1144,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772506186}
-  m_LocalRotation: {x: 0.117013134, y: 0.0043340926, z: -0.00051065866, w: 0.9931208}
+  m_LocalRotation: {x: 0.117013134, y: 0.0043340586, z: -0.00051065465, w: 0.9931208}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1835,7 +1835,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200410420}
-  m_LocalRotation: {x: 0.098977216, y: 0.004342622, z: -0.00043194578, w: 0.9950802}
+  m_LocalRotation: {x: 0.098977216, y: 0.004342631, z: -0.00043194662, w: 0.9950802}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2316,7 +2316,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723419029}
-  m_LocalRotation: {x: 0.11701314, y: 0.004334093, z: -0.0005106587, w: 0.9931208}
+  m_LocalRotation: {x: 0.11701314, y: 0.004334059, z: -0.0005106548, w: 0.9931208}
   m_LocalPosition: {x: -831.1571, y: 263.37, z: -42.789314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2456,7 +2456,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807496740}
-  m_LocalRotation: {x: 0.13505812, y: 0.0043240897, z: -0.0005894094, w: 0.9908281}
+  m_LocalRotation: {x: 0.13505812, y: 0.004324052, z: -0.0005894042, w: 0.9908281}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2550,6 +2550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0069389fcb712494d9dbeb8ff06a87cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneName: BattleSceneTigre
 --- !u!1 &1848687203
 GameObject:
   m_ObjectHideFlags: 3

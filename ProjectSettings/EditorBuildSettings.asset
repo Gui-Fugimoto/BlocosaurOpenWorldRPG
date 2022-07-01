@@ -11,7 +11,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World.unity
     guid: e2337a626e24b0c4da62abf8af6e7fb6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BattleScene.unity
     guid: a6de74babc229cc47a39d61c0103a5af
+  - enabled: 1
+    path: Assets/Scenes/BattleSceneMacaco.unity
+    guid: f178c25ce03b8004783dbd7146a5c4d6
+  - enabled: 1
+    path: Assets/Scenes/BattleSceneMamute.unity
+    guid: 81264965972f7524ca0a49f396b46112
+  - enabled: 0
+    path: Assets/Scenes/BattleScenePreguica.unity
+    guid: 793f6af926ed8954ca29c2988beab439
+  - enabled: 1
+    path: Assets/Scenes/BattleSceneTatu.unity
+    guid: d6ec2e2d5d27df94f98997c16a3a32fb
+  - enabled: 1
+    path: Assets/Scenes/BattleSceneTigre.unity
+    guid: c1af708cb457fdb438b890fd9a73e7f6
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: 30af00cd2e2188444b866e3cd939d236
   m_configObjects: {}

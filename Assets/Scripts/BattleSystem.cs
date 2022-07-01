@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, RUN }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -102,7 +103,7 @@ public class BattleSystem : MonoBehaviour
         if (isDead)
         {
             state = BattleState.LOST;
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         else
         {
@@ -111,15 +112,28 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    void EndBattle()
+    IEnumerator EndBattle()
     {
         if(state == BattleState.WON)
         {
             dialogText.text = "Blocossauro venceu!";
-        }else if (state == BattleState.LOST)
+
+            yield return new WaitForSeconds(2f);
+            MudarCenas();
+        }
+        else if (state == BattleState.LOST)
         {
             dialogText.text = "Blocossauro perdeu...";
+            yield return new WaitForSeconds(2f);
+            MudarCenas();
         }
+        else if (state == BattleState.RUN)
+        {
+            dialogText.text = "Blocossauro fugiu!";
+            yield return new WaitForSeconds(2f);
+            MudarCenas();
+        }
+
     }
     void PlayerTurn()
     {
@@ -142,5 +156,9 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerHeal());
 
+    }
+    public void MudarCenas()
+    {
+        LoadScreenManager.Instance.LoadScene("World");
     }
 }

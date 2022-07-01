@@ -60,3 +60,29 @@ crashlytics-build.properties
 
 
 Assets/NossosAssets/Materials.meta
+
+Assets/Imports/ImportLoad.unitypackage.meta
+
+Assets/Imports/LoadingIMport.unitypackage.meta
+
+Assets/Prefabs/LevelManager.prefab
+
+Assets/Prefabs/LevelManager.prefab.meta
+
+Assets/Scenes/LoadingScreen.unity
+
+Assets/Scenes/LoadingScreen.unity.meta
+
+Assets/Scenes/World.unity
+
+Assets/Scripts/BattleSystem.cs
+
+Assets/Scripts/LoadScreenManager.cs
+
+Assets/Scripts/LoadScreenManager.cs.meta
+
+Assets/Scripts/StartCombat.cs
+
+ProjectSettings/EditorBuildSettings.asset
+
+UserSettings/EditorUserSettings.asset

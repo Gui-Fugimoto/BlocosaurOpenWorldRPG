@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StartCombat : MonoBehaviour
 {
+    public string SceneName;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("BattleScene");
+            SceneManager.LoadScene(SceneName);
         }
     }
 
