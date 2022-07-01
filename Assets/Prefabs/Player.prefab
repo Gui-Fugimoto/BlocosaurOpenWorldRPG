@@ -47,8 +47,8 @@ MonoBehaviour:
   unitName: Blocossauro
   unitLevel: 5
   damage: 15
-  maxHP: 80
-  currentHP: 80
+  maxHP: 60
+  currentHP: 60
 --- !u!1001 &6994248169007611817
 PrefabInstance:
   m_ObjectHideFlags: 0

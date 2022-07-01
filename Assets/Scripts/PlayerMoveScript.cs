@@ -36,8 +36,6 @@ public class PlayerMoveScript : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-        //float horizontal = Input.GetAxisRaw("Horizontal");
-        //float vertical = Input.GetAxisRaw("Vertical");
 
         float horizontal = moveJoy.Horizontal;
         float vertical = moveJoy.Vertical;
@@ -47,6 +45,8 @@ public class PlayerMoveScript : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+
 
         if (direction.magnitude >= 0.1f)
         {
@@ -59,6 +59,8 @@ public class PlayerMoveScript : MonoBehaviour
 
 
         }
+
+
 
     }
     public void JumpOnButtonCommand()
