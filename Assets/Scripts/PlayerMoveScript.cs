@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMoveScript : MonoBehaviour
 {
     public FixedJoystick moveJoy;
+    public Joystick RightJoystick;
     public CharacterController controller;
     public Transform cam;
     public float jumpHeight = 3f;
@@ -17,7 +18,8 @@ public class PlayerMoveScript : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     bool isGrounded;
-
+    protected float CameraAngle;
+    protected float CameraAngleSpeed = 5f;
 
     float turnSmoothVelocity;
 
@@ -60,7 +62,11 @@ public class PlayerMoveScript : MonoBehaviour
 
         }
 
+        CameraAngle += RightJoystick.Horizontal * CameraAngleSpeed;
 
+
+        Camera.main.transform.position = transform.position + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0, 5, -20);
+        Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up * 2f - Camera.main.transform.position, Vector3.up);
 
     }
     public void JumpOnButtonCommand()
