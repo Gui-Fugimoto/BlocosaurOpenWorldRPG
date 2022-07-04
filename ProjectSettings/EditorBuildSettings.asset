@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: d5bfc41aa22709c439811f2fa64142f5
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
@@ -47,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Neve.unity
     guid: 3c24f5647ff905e4c8e2e56c1bcec9aa
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 94c5bca59fb177948b9ad93b5b9c3da5
   m_configObjects: {}
